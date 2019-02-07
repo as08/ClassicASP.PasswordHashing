@@ -96,7 +96,7 @@ Output:
 
 	True
 		
-**NOTE:** The "~P" in the Argon2 hash indicates that a pepper was applied to the password before hashing. This is so the verification function knows to reapply the pepper. The "~P" is removed before the verification function call s the COM DLL.
+**NOTE:** The "~P" in the Argon2 hash indicates that a pepper was applied to the password before hashing. This is so the verification function knows to reapply the pepper. The "~P" is removed before the verification function calls the COM DLL.
 
 *****************************************************************************
 
@@ -128,7 +128,7 @@ Output:
 
 	True
 		
-**NOTE:** The "~P" in the Bcrypt hash indicates that a pepper was applied to the password before hashing. This is so the verification function knows to reapply the pepper. The "~P" is removed before the verification function call s the COM DLL.
+**NOTE:** The "~P" in the Bcrypt hash indicates that a pepper was applied to the password before hashing. This is so the verification function knows to reapply the pepper. The "~P" is removed before the verification function calls the COM DLL.
 
 *****************************************************************************
 
@@ -162,4 +162,4 @@ Output:
 
 **NOTE:** The PBKDF2 parameters are contained within the base64 hash string.
 
-**NOTE:** The "~P" in the PBKDF2 hash indicates that a pepper was applied to the password before hashing. This is so the verification function knows to reapply the pepper. The "~P" is removed before the verification function call s the COM DLL.
+**NOTE:** The "~P" in the PBKDF2 hash indicates that a pepper was applied to the password before hashing. This is so the verification function knows to reapply the pepper. The "~P" is removed before the verification function calls the COM DLL.
