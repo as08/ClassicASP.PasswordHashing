@@ -159,3 +159,8 @@ Output:
 **NOTE:** The PBKDF2 parameters are contained within the base64 hash string.
 
 **NOTE:** The "~P" in the PBKDF2 hash indicates that a pepper was applied to the password before hashing. This is so the verification function knows to reapply the pepper. The "~P" is removed before the verification function calls the COM DLL.
+
+
+*****************************************************************************
+
+Also included in the class is a function for computing HMAC keys, as well as a function for validating passwords against a regular expression string to ensure they meet a minimum entropy requirement. 
