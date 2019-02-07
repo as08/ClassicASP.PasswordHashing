@@ -520,7 +520,7 @@
             ' At least one lower case English letter, (?=.*?[a-z])
             ' At least one digit, (?=.*?[0-9])
             ' At least one special character, (?=.*?[#?!@$%^&*-])
-            ' Minimum 8 characters, maximum 72, .{8,} (with the anchors)
+            ' Minimum 8 characters, maximum 72, .{8,72} (with the anchors)
 
             Dim vpRegExp : Set vpRegExp = New RegExp
             vpRegExp.Pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,72}$"
