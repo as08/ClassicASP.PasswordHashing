@@ -25,7 +25,7 @@ This method requires a COM DLL to be installed. See: https://github.com/as08/Cla
 *****************************************************************************
 
 ### COM DLL installation:
-Installation instruction for the various COM DLL's are available on their respective GitHub pages.
+Installation instructions for the various COM DLL's are available on their respective GitHub pages.
 
 You will need root access to your server to install the COM DLL's. You can customize the Argon2, Bcrypt and PBKDF2 hashing parameters aswell as enabling/setting the pepper in the **Class_Initialize()** sub.
 
