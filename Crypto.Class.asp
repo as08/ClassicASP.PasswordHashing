@@ -543,8 +543,12 @@
 
     /* 
 
-        Salt generation functions for standard password hashing. Argon2, Bcrypt and PBKDF2  
-        uses System.Security.Cryptography.RandomNumberGenerator for generating salts
+        Salt generation functions for standard password hashing (Argon2, Bcrypt
+        and PBKDF2 use System.Security.Cryptography.RandomNumberGenerator for
+        generating salts. However this isn't available in VBscript without the
+        use of a COM DLL. See https://github.com/as08/ClassicASP.PRNG if you 
+        wish to generate cryptographically secure pseudorandom numbers and 
+        strings in VBscript).
 
         Javascript's Math.random() function produces a larger floating-point, 
         pseudo-random number compared to VBscript's Rnd() function, making it 
