@@ -30,9 +30,28 @@ No changes need to be made to the code if you don't/can't install the DLL's, you
 
 *****************************************************************************
 
+### Setting a pepper:
+
+In Class_Initialize():
+
+	use_pepper = true
+	pepper = "Q[q|El^i@ngI7uj)>MCP<4w7^>r;)d" ' obvioulsy set your own, don't use this one
+	
+The pepper is a secret constant that should never change. For standard password hashing it is added to the users password along with the salt, however unlike the salt it is NOT included in the returned hash string. Instead a "~P" is included in the hash string to indicate to the verification function that the pepper was used.
+
+If you're using a pepper make sure you keep a hard copy (printed off or saved to a memory stick and stored somewhere safe) just incase your code becomes corrupted or lost and needs rebuilding. If you lose your pepper you will not be able to verify passwords.
+
+In the case of Argon2, Bcrypt and PBKDF2 the pepper is added to the password (at the end) but the salt is generated in the COM DLL.
+
+*****************************************************************************
+
 ### Standard password hashing example:
 
+Class function:
+
 	hashPassword([USERS PASSWORD],[HASHING ALGORITHM],[ENCODING])
+	' Hashing algorithms supported are: MD5, SHA1, SHA256, SHA384 and SHA512
+	' Encoding can be base64 (b64) or Hex
 	
 In VBscript for Classic ASP:
 
@@ -66,6 +85,16 @@ Output:
 
 ### Argon2 password hashing example:
 
+Parameters in Class_Initialize():
+
+	a2_timeCost = 4 ' default: 4
+	a2_memoryCost = 2048 ' default: 2048
+	a2_lanes = 4 ' default: 4
+	a2_threads = 4 ' default: Computers Processor Count
+	a2_saltBytes = 16 ' default: 16
+
+Class function:
+
 	hashPasswordArgon2([USERS PASSWORD])
 	
 In VBscript for Classic ASP:
@@ -98,6 +127,12 @@ Output:
 
 ### Bcrypt password hashing example:
 
+Parameters in Class_Initialize():
+
+	Bcrypt_workFactor = 12 ' default: 10
+
+Class function:
+
 	hashPasswordBcrypt([USERS PASSWORD])
 	
 In VBscript for Classic ASP:
@@ -108,7 +143,7 @@ In VBscript for Classic ASP:
 	
 Output example:
 
-	$2a~P$10$s9THkLgv6bJU9Qio8Id2N.FpB79P5w4zdsHvzMAxHK/ht3KxQnsca
+	$2a~P$12$s9THkLgv6bJU9Qio8Id2N.FpB79P5w4zdsHvzMAxHK/ht3KxQnsca
 	
 Execution time:
 
@@ -118,7 +153,7 @@ Verification example:
 
 	set crypt = new crypto
 	
-	response.write crypt.verifyPassword("myPassword","$2a~P$10$s9THkLgv6bJU9Qio8Id2N.FpB79P5w4zdsHvzMAxHK/ht3KxQnsca")
+	response.write crypt.verifyPassword("myPassword","$2a~P$12$s9THkLgv6bJU9Qio8Id2N.FpB79P5w4zdsHvzMAxHK/ht3KxQnsca")
 
 Output:
 
@@ -129,6 +164,15 @@ Output:
 *****************************************************************************
 
 ### PBKDF2 password hashing example:
+
+Parameters in Class_Initialize():
+
+	PBKDF2_iterations = 30000 ' default: 10000
+	PBKDF2_alg = "sha512" ' default: sha1 | only sha1, sha256 and sha512 are supported
+	PBKDF2_saltBytes = 16 ' default: 16
+	PBKDF2_keyLength = 32 ' default:32
+
+Class function:
 
 	hashPasswordPBKDF2([USERS PASSWORD])
 	
