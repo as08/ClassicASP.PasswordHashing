@@ -30,7 +30,7 @@ No changes need to be made to the code if you don't/can't install the DLL's, you
 
 *****************************************************************************
 
-### Setting a pepper:
+### Setting a pepper (optional but recommended):
 
 In Class_Initialize():
 
