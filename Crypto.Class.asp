@@ -547,8 +547,8 @@
         and PBKDF2 use System.Security.Cryptography.RandomNumberGenerator for
         generating salts. However this isn't available in VBscript without the
         use of a COM DLL. See https://github.com/as08/ClassicASP.PRNG if you 
-        wish to generate cryptographically secure pseudorandom numbers and 
-        strings in VBscript).
+        wish to generate stand-alone cryptographically secure pseudo-random 
+        numbers and strings in VBscript).
 
         Javascript's Math.random() function produces a larger floating-point, 
         pseudo-random number compared to VBscript's Rnd() function, making it 
