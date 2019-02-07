@@ -48,7 +48,7 @@
             ' Bcrypt default work factor, between 4 and 31. 
             ' 10 is used as default if no work factor is specified
 
-            Bcrypt_workFactor = 10
+            Bcrypt_workFactor = 12
 
             ' PBKDF2 parameters
 
