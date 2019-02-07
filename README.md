@@ -208,3 +208,7 @@ Verification output:
 *****************************************************************************
 
 Also included in the class is a function for computing HMAC keys, as well as a function for validating passwords against a regular expression string to ensure they meet a minimum entropy requirement. 
+
+*****************************************************************************
+
+I would personally recommend Bcrypt as the preferred password hashing algorithm with a work factor of 11 or 12 (don't go lower than 10). Depending on your server specs you could go higher than 12, but run some tests first and call the **crypto.execution_time()** function to gauge the execution time.
