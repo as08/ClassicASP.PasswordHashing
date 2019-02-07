@@ -24,7 +24,7 @@ This method requires a COM DLL to be installed. See: https://github.com/as08/Cla
 
 *****************************************************************************
 
-You will need root access to your server to install the COM DLL's. You can customize the Argon2, Bcrypt and PBKDF2 hashing parameters in the **Class_Initialize()** sub.
+You will need root access to your server to install the COM DLL's. You can customize the Argon2, Bcrypt and PBKDF2 hashing parameters aswell as enabling/setting the pepper in the **Class_Initialize()** sub.
 
 No changes need to be made to the code if you don't/can't install the DLL's, you just won't be able to call the Argon2/Bcrypt/PBKDF2 functions.
 
