@@ -77,7 +77,7 @@ Verification example:
 
 	response.write crypt.verifyPassword("myPassword","$SHA256~P$B64$DmP8L5wIyrNEpmA+zQJ2QeewczR3zK1XZqg36/vKAVQ=$A0kREThQ2dl/joc5YQqKaZq5Vh0pHAI1bFvStWJEkhw=")
 	
-Output:
+Verification output:
 
 	True
 	
@@ -117,7 +117,7 @@ Verification example:
 	
 	response.write crypt.verifyPassword("myPassword","$argon2i~P$v=19$m=2048,t=4,p=4$N5yT2b+RtHdYQo4/wND/yA==$QVkCxOLyBh9evOxf117BWrE+XgzSrrA4y1okUQCUW/w=")
 
-Output:
+Verification output:
 
 	True
 		
@@ -155,7 +155,7 @@ Verification example:
 	
 	response.write crypt.verifyPassword("myPassword","$2a~P$12$s9THkLgv6bJU9Qio8Id2N.FpB79P5w4zdsHvzMAxHK/ht3KxQnsca")
 
-Output:
+Verification output:
 
 	True
 		
@@ -170,7 +170,7 @@ Parameters in Class_Initialize():
 	PBKDF2_iterations = 30000 ' default: 10000
 	PBKDF2_alg = "sha512" ' default: sha1 | only sha1, sha256 and sha512 are supported
 	PBKDF2_saltBytes = 16 ' default: 16
-	PBKDF2_keyLength = 32 ' default:32
+	PBKDF2_keyLength = 32 ' default: 32
 
 Class function:
 
@@ -196,7 +196,7 @@ Verification example:
 	
 	response.write crypt.verifyPassword("myPassword","$PBKDF2~P$AQAAAAIAAHUwAAAAEOLUzLqiYYJqzZJVVDOOJuIBYmleusTd31QfXC6YAjFqPFnSdzFns+pnqSWe8qvvLg==")
 
-Output:
+Verification output:
 
 	True
 
