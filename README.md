@@ -3,7 +3,7 @@ This is a class of VBscript functions that can be used for password hashing in C
 There are 4 methods of password hashing included.
 
 ## 1. Standard password hashing
-The users password is hashed using either MD5, SHA1, SHA256, SHA384 or SHA512. A random salt is generated, the size of which is determined by the bit size of the specified hashing algorithm. A cryptographic pepper is also added if specified. A "hash string" is returned containing all the information needed to verify against the original password.
+The users password is hashed using either MD5, SHA1, SHA256, SHA384 or SHA512 (MD5 and SHA1 should be avoided). A random salt is generated, the size of which is determined by the bit size of the specified hashing algorithm. A cryptographic pepper is also added if specified. A hash string is returned containing all the information needed to verify against the original password.
 
 This method uses the System.Security.Cryptography class to perform the hashing and requires the .NET framework to be installed, which it is by default on all Windows Servers 2003+ **including** most shared hosting servers. (The standard password hashing function has been tested on GoDaddy's Shared Windows Hosting)
 
