@@ -57,7 +57,7 @@ In VBscript for Classic ASP:
 
 	set crypt = new crypto 
 
-	response.write crypt.hashPassword("myPassword","SHA256","b64") ' encoding can also be hex
+	response.write crypt.hashPassword("myPassword","SHA256","b64")
 	
 Output example:
 
