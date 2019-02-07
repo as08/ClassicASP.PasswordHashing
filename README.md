@@ -41,7 +41,7 @@ The pepper is a secret constant that should never change. For standard password 
 
 If you're using a pepper make sure you keep a hard copy (printed off or saved to a memory stick and stored somewhere safe) just incase your code becomes corrupted or lost and needs rebuilding. If you lose your pepper you will not be able to verify passwords.
 
-In the case of Argon2, Bcrypt and PBKDF2 the pepper is added to the password (at the end) but the salt is generated in the COM DLL.
+In the case of Argon2, Bcrypt and PBKDF2 the pepper is added to the password in the crypto class but the salt is generated within the COM DLL.
 
 *****************************************************************************
 
