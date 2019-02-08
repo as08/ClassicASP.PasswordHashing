@@ -33,6 +33,22 @@ No changes need to be made to the code if you don't/can't install the DLL's, you
 
 *****************************************************************************
 
+### How to use the class:
+Simply download **Crypto.Class.asp** and include the file in your Classic ASP application.
+
+	<!--#include file = "Crypto.Class.asp" -->
+	<%
+	
+		set crypt = new crypto 
+		
+			' DO SOME PASSWORD HASHING
+		
+		set crypt = nothing
+	
+	%>
+
+*****************************************************************************
+
 ### Setting a pepper (optional but recommended):
 
 In Class_Initialize():
