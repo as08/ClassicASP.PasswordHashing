@@ -5,7 +5,7 @@ There are 4 methods of password hashing included.
 ## 1. Standard password hashing
 The users password is hashed using either MD5, SHA1, SHA256, SHA384 or SHA512 (MD5 and SHA1 should be avoided). A random salt is generated, the size of which is determined by the bit size of the specified hashing algorithm. A pepper is also added if specified. A hash string is returned containing all the information needed to verify against the original password.
 
-This method uses the System.Security.Cryptography class to perform the hashing and requires the .NET framework to be installed, which it is by default on all Windows Servers 2003+ **including** most shared hosting servers. (The standard password hashing function has been tested on GoDaddy's Shared Windows Hosting)
+This method uses the System.Security.Cryptography class to perform the hashing and requires the .NET framework to be installed, which it is by default on all Windows Servers 2003+ **including most shared hosting servers**. (The standard password hashing function has been tested on GoDaddy's Shared Windows Hosting)
 
 ## 2. Argon2 (2i)
 Argon2 is a key derivation function that was selected as the winner of the Password Hashing Competition in July 2015. It was designed by Alex Biryukov, Daniel Dinu, and Dmitry Khovratovich from the University of Luxembourg. Argon2i is optimized to resist side-channel attacks. It accesses the memory array in a password independent order.
