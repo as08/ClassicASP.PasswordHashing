@@ -192,7 +192,7 @@
 
                 if use_pepper then
 
-                    ' Alter the Bcrypt hash to indicate that the pepper was used.
+                    ' Alter the PBKDF2 hash to indicate that the pepper was used.
                     ' This will be removed before verifying
 
                     hashPasswordPBKDF2 = replace(hashPasswordPBKDF2,"$PBKDF2","$PBKDF2~P",1,-1,1)
