@@ -204,10 +204,15 @@
         end function
 
         public function verifyPassword(ByVal pass, ByVal theHash)
-
+            
             ' Invalid by default
 
             verifyPassword = false
+            
+            ' Catch any unhandled errors returned by the COM DLL's.
+            ' False will be returned in the event of an unhandled error
+            
+            on error resume next
 
             ' Was the hash generated using hashPasswordArgon2?
 
@@ -316,6 +321,10 @@
                 then verifyPassword = true
 
             end if
+            
+            ' reset any errors
+            
+            on error goto 0
 
         end function
 
