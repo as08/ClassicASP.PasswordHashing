@@ -51,7 +51,7 @@ Simply download **Crypto.Class.asp** and include the file in your Classic ASP ap
 
 ### Setting a pepper (optional but recommended):
 
-In Class_Initialize():
+In Crypto.Class.asp > Class_Initialize():
 
 	use_pepper = true
 	pepper = "Q[q|El^i@ngI7uj)>MCP<4w7^>r;)d" ' obvioulsy set your own, don't use this one
@@ -106,7 +106,7 @@ Verification output:
 
 ### Argon2 password hashing example:
 
-Parameters in Class_Initialize():
+Parameters in Crypto.Class.asp > Class_Initialize():
 
 	a2_timeCost = 4 ' default: 4
 	a2_memoryCost = 2048 ' default: 2048
@@ -148,7 +148,7 @@ Verification output:
 
 ### Bcrypt password hashing example:
 
-Parameters in Class_Initialize():
+Parameters in Crypto.Class.asp > Class_Initialize():
 
 	Bcrypt_workFactor = 12 ' default: 10
 
@@ -186,7 +186,7 @@ Verification output:
 
 ### PBKDF2 password hashing example:
 
-Parameters in Class_Initialize():
+Parameters in Crypto.Class.asp > Class_Initialize():
 
 	PBKDF2_iterations = 30000 ' default: 10000
 	PBKDF2_alg = "sha512" ' default: sha1 | only sha1, sha256 and sha512 are supported
