@@ -66,7 +66,7 @@ In VBscript for Classic ASP:
 	
 Output example:
 
-	$SHA256~P$B64$DmP8L5wIyrNEpmA+zQJ2QeewczR3zK1XZqg36/vKAVQ=$A0kREThQ2dl/joc5YQqKaZq5Vh0pHAI1bFvStWJEkhw=
+	$SHA256~P$B64$W6hG6jJ4MPZy2NdSu9+l5ntRzRfoq0SipCD4e9Co8NI=$q15HJ4YR+tr7IXtaFX3VGzRZAoEXdccwvEB0xoJrQ8c=
 	
 Execution time:
 
@@ -80,7 +80,7 @@ Verification example:
 
 	set crypt = new crypto
 
-	response.write crypt.verifyPassword("myPassword","$SHA256~P$B64$DmP8L5wIyrNEpmA+zQJ2QeewczR3zK1XZqg36/vKAVQ=$A0kREThQ2dl/joc5YQqKaZq5Vh0pHAI1bFvStWJEkhw=")
+	response.write crypt.verifyPassword("myPassword","$SHA256~P$B64$W6hG6jJ4MPZy2NdSu9+l5ntRzRfoq0SipCD4e9Co8NI=$q15HJ4YR+tr7IXtaFX3VGzRZAoEXdccwvEB0xoJrQ8c=")
 	
 Verification output:
 
@@ -110,7 +110,7 @@ In VBscript for Classic ASP:
 	
 Output example:
 
-	$argon2i~P$v=19$m=2048,t=4,p=4$N5yT2b+RtHdYQo4/wND/yA==$QVkCxOLyBh9evOxf117BWrE+XgzSrrA4y1okUQCUW/w=
+	$argon2i~P$v=19$m=2048,t=4,p=4$u+bPXf3XgZENMKq6IywXhA==$IUrJyoSzA+pbfZu7Ujqq5i+2g9Zfs85x3WM8Pm0JINc=
 	
 Execution time:
 
@@ -120,7 +120,7 @@ Verification example:
 
 	set crypt = new crypto
 	
-	response.write crypt.verifyPassword("myPassword","$argon2i~P$v=19$m=2048,t=4,p=4$N5yT2b+RtHdYQo4/wND/yA==$QVkCxOLyBh9evOxf117BWrE+XgzSrrA4y1okUQCUW/w=")
+	response.write crypt.verifyPassword("myPassword","$argon2i~P$v=19$m=2048,t=4,p=4$u+bPXf3XgZENMKq6IywXhA==$IUrJyoSzA+pbfZu7Ujqq5i+2g9Zfs85x3WM8Pm0JINc=")
 
 Verification output:
 
@@ -148,7 +148,7 @@ In VBscript for Classic ASP:
 	
 Output example:
 
-	$2a~P$12$s9THkLgv6bJU9Qio8Id2N.FpB79P5w4zdsHvzMAxHK/ht3KxQnsca
+	$2a~P$12$n4p3nDVlAdo5bfnPepgB0OGztMMvvP/wvHFAiMl0TKUcsa6EYrwOq
 	
 Execution time:
 
@@ -158,7 +158,7 @@ Verification example:
 
 	set crypt = new crypto
 	
-	response.write crypt.verifyPassword("myPassword","$2a~P$12$s9THkLgv6bJU9Qio8Id2N.FpB79P5w4zdsHvzMAxHK/ht3KxQnsca")
+	response.write crypt.verifyPassword("myPassword","$2a~P$12$n4p3nDVlAdo5bfnPepgB0OGztMMvvP/wvHFAiMl0TKUcsa6EYrwOq")
 
 Verification output:
 
@@ -189,7 +189,7 @@ In VBscript for Classic ASP:
 	
 Output example:
 
-	$PBKDF2~P$AQAAAAIAAHUwAAAAEOLUzLqiYYJqzZJVVDOOJuIBYmleusTd31QfXC6YAjFqPFnSdzFns+pnqSWe8qvvLg==
+	$PBKDF2~P$AQAAAAIAAHUwAAAAENW4TYfjL2mYI/wtHxKkvYRix5DYv+4KaZ6rzURo/WwahzcNTTYMxA+5elCkqUOAkg==
 	
 Execution time:
 
@@ -199,7 +199,7 @@ Verification example:
 
 	set crypt = new crypto
 	
-	response.write crypt.verifyPassword("myPassword","$PBKDF2~P$AQAAAAIAAHUwAAAAEOLUzLqiYYJqzZJVVDOOJuIBYmleusTd31QfXC6YAjFqPFnSdzFns+pnqSWe8qvvLg==")
+	response.write crypt.verifyPassword("myPassword","$PBKDF2~P$AQAAAAIAAHUwAAAAENW4TYfjL2mYI/wtHxKkvYRix5DYv+4KaZ6rzURo/WwahzcNTTYMxA+5elCkqUOAkg==")
 
 Verification output:
 
