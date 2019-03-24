@@ -29,7 +29,9 @@
             use_pepper = true
             pepper = "xxxxxxxxxxxxxxxx" ' change to a secret random string
 
-            ' Argon 2 parameters
+            ' ---------------------------------------------------------------
+            ' Argon 2 parameters                                            '
+            '----------------------------------------------------------------
 
             ' Defaults used by ClassicASP.Argon2 if none specified:
 
@@ -44,13 +46,19 @@
             a2_lanes = 4
             a2_threads = 4
             a2_saltBytes = 16
+            
+            ' ---------------------------------------------------------------
+            ' Bcrypt parameters                                             '
+            ' ---------------------------------------------------------------
 
             ' Bcrypt default work factor, between 4 and 31. 
             ' 10 is used as default if no work factor is specified
 
             Bcrypt_workFactor = 12
 
-            ' PBKDF2 parameters
+            ' ---------------------------------------------------------------
+            ' PBKDF2 parameters                                             '
+            ' ---------------------------------------------------------------
 
             ' Defaults used by ClassicASP.PBKDF2 if none specified:
 
@@ -122,6 +130,9 @@
                                         a2_lanes,_
                                         a2_threads,_
                                         a2_saltBytes)
+                                        
+                ' or to use the default parameters:
+                ' hashPasswordArgon2 = agron2.hash(password)
 
                 if use_pepper then
 
@@ -131,9 +142,6 @@
                     hashPasswordArgon2 = replace(hashPasswordArgon2,"$argon2i","$argon2i~P",1,-1,1)
 
                 end if
-
-            ' or to use the default parameters:
-            ' hashPasswordArgon2 = agron2.hash(password)
 
             set agron2 = nothing
 
